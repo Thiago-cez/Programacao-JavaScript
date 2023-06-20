@@ -1,3 +1,21 @@
+let amountEquilatero = 0;
+let amountIsosceles = 0;
+let amountEscaleno = 0;
+
+
+//function to counter and increment which triangle is: 
+function updateTriangle() {
+    document.getElementById("labelEquilatero").innerText = amountEquilatero;
+    document.getElementById("labelEscaleno").innerText = amountEscaleno;
+    document.getElementById("labelIsosceles").innerText = amountIsosceles;
+}
+
+function cleanDate() {
+    document.getElementById("firstSide").value= ("");
+    document.getElementById("secondSide").value= ("");
+    document.getElementById("thirdSide").value= ("");
+}
+
 //function to discover what kind of triangle is:
 function triangle() {
 
@@ -35,14 +53,23 @@ function triangle() {
 
         //condicional to validate e discover what kind of triangle is
         if(side1.value==side2.value && side2.value==side3.value && side3.value==side1.value){
-            result.innerHTML = "Equilatero"
+            result.innerHTML = "Equilatero";
+            amountEquilatero = amountEquilatero + 1;
+
+            updateTriangle();
         }
         else if(side1.value!=side2.value && side2.value!=side3.value && side3.value!=side1.value){
             result.innerHTML = "Escaleno";
+            amountEscaleno = amountEscaleno + 1;
+            
+            updateTriangle();
         }
         else {
             result.innerHTML = "Isósceles";
+            amountIsosceles = amountIsosceles + 1;
+
+            updateTriangle();
         } 
     }
-    
 }
+cleanDate();
