@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="class11.css">
     <title>Class11</title>
 </head>
-        <body>
+        <body onload="updateVotes()">
             <div class="container">
                 <div id="form"> 
                     <input id="optionYes" name="answer" type="radio" value="YES">
@@ -15,15 +15,15 @@
                     <input id="optionNo" name="answer" type="radio" value="NO">
                     <label for="optionNo" > NO </label>
                     <br>
-                    <button> Votar </button>
+                    <button onclick="vote()"> Vote </button>
                 </div>
 
                 <div id="result">
-                    SIM <label id="labelSim" for=""> 0 </label>
-                    NÃO <label id="labelNao" for=""> 1 </label>
+                    SIM:  <label id="labelYes" for=""> </label>
+                    NÃO:  <label id="labelNo" for="">  </label>
                 </div>
             </div>
             
         </body>
-    <script src="class11.html"></script>
+    <script src="class11.js"></script>
 </html>
