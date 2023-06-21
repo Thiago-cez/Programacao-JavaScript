@@ -2,6 +2,11 @@ const firstDiv = document.querySelector(".main-screen");
 const ResultDiv = document.querySelector(".resultado");
 
 
+//criar contador; 
+let contadorAprovado = 0;
+let contadorReprovado = 0;
+let contadorRecuperacao = 0;
+
 //fFunction to switch navigation forms: 
 function go(currentStep,nextStep) {
     let dNone, dBlock;
@@ -20,6 +25,20 @@ function go(currentStep,nextStep) {
         dBlock = ResultDiv;
     }
     dBlock.style.display = "block";
+}
+
+//função para Atualizar os votos:
+function atualizarVotos() {
+    document.getElementById("reprovados").innerText = contadorReprovado;
+    document.getElementById("aprovados").innerText = contadorAprovado;
+    document.getElementById("recuperacao").innerText = contadorRecuperacao;
+}
+
+function limparDados() {
+    
+    document.getElementById("grade1").value = ("");
+    document.getElementById("grade2").value = ("");
+    document.getElementById("grade3").value = ("");
 }
 
 function validate() {
@@ -59,17 +78,23 @@ function validate() {
         if(mediaOfThree >= 7) {
             result.style.color = "green";
             result.innerHTML = "Aprovado";
+            contadorAprovado = contadorAprovado + 1;
+            atualizarVotos();
         }
         else if(mediaOfThree> 4 && mediaOfThree < 7) {
             result.style.color = "yellow";
-            result.innerHTML = "Prova Final"
+            result.innerHTML = "Prova Final";
+            contadorRecuperacao = contadorRecuperacao + 1;
+            atualizarVotos();
         }
         else {
             result.style.color = "red";
-            result.innerHTML = "Reprovado!"
-
-            
+            result.innerHTML = "Reprovado!";
+            contadorRecuperacao = contadorAprovado + 1;
+            atualizarVotos();
         }
-        go(1,2)
+        limparDados();
+        go(1,2);
+        
     }
 }

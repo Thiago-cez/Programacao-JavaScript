@@ -10,6 +10,7 @@ function updateTriangle() {
     document.getElementById("labelIsosceles").innerText = amountIsosceles;
 }
 
+//function to clean date in html field.
 function cleanDate() {
     document.getElementById("firstSide").value= ("");
     document.getElementById("secondSide").value= ("");
