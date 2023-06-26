@@ -1,14 +1,13 @@
 /* let sair= "nao"
 let c = 0
 while (sair=="nao"){
-​
     console.log("Estou no loop mais uma vez")
     c++
     sair = prompt("Deseja Sair? sim | nao")
 }
-​
 console.log("O loop foi realizador por "+ c + " vezes")
-​
+
+
 */
 
 //-------------------------------------------------------------
@@ -39,5 +38,76 @@ while (sair == "nao") {
     console.log("o numero par foi impresso " + par + " vezes")
     console.log("o numero impar foi impresso " + impar + "vezes")
 
+//-------------------------------------------------------------
 
+
+
+/** 
+ * - Faça um programa que leia uma quantidade n de números,  some a quantidade de números pares e ímpares digitados e 
+ * calcula a média de todos os números digitados, exiba no final o resultado 
+ * 
+  */
+ let out = "nao";
+ let cont = 0; 
+ let numerosImpares = 0;
+ let numerosPares = 0;
+ let media;
+
+while (out == "nao") {
+    let num =  prompt("digite um numero inteiro")
+    if(num%2 == 0){
+        console.log("esse numero é par")
+       numerosPares = numerosPares + 1;
+    } else {
+        console.log("esse numero é impar")
+        numerosImpares = numerosImpares + 1;
+    }
+    cont++
+    out = prompt("deseja  sair agora?  Sim | nao");
+    media = numerosPares + numerosImpares / cont;
+}
+
+console.log("media dos numeros Calculados é: "+ media);
+console.log("a quantidade de numeros pares são: "+ numerosPares);
+console.log("a quantidade de numeros Impares São: "+ numerosImpares);
+
+
+
+//-------------------------------------------------------------
+
+
+
+/** 
+ * - Faça um programa que leia uma quantidade n de número,  some a quantidade de números pares e ímpares digitados e 
+ * calcula a média de todos os números digitados, a media dos pares e media dos impares, exiba  no final o todos as somas como resultado 
+ * 
+*/
+
+
+
+
+
+
+
+
+
+//-------------------------------------------------------------
+
+
+
+
+
+
+
+
+/** 
+ * - Faça um programa que leia uma quantidade n de número, calcule e   exiba  a tabuada de cada numero digitado 
+ */
+
+//digite um numero:7 (7x1=1 7x2 =14 ... 7x10=70)
+//deseja sair ? nao 
+//digite um numero:8 (8x1=8, 8x2=16 ... 8x10=80)
+//deseja sair? nao
+//digite um numero:5 (5x1=5, 5x2=10 ... 5x10=50)
+//deseja sair? sim
    
