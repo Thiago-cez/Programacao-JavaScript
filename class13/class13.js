@@ -101,7 +101,7 @@ while(saida == "nao") {
         somarImpares = somarImpares + parseFloat(num);
         console.log(somarImpares);
     }
-    saida = prompt("Deseja sair??!  SIM | NAO ")
+    saida = prompt( "Deseja sair??!  SIM | NAO " )
 }
 console.log(" A média dos números digitados é: " + media)
 
