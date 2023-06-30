@@ -76,8 +76,8 @@ console.log("a quantidade de numeros Impares São: "+ numerosImpares);
 
 
 /** 
- * - Faça um programa que leia uma quantidade n de número,  some a quantidade de números pares e ímpares digitados e 
- * calcula a média de todos os números digitados, a media dos pares e media dos impares, exiba  no final o todos as somas como resultado 
+ * - Faça um programa que leia uma quantidade n de número,  some a quantidade de números pares e ímpares digitados, e 
+ calcula a média de todos os números digitados, a media dos pares e media dos impares, exiba  no final o todos as somas como resultado 
  * 
 */
 
@@ -87,9 +87,9 @@ var numerosImpares = 0;
 var somarImpares = 0;
 var saida = "nao";
 
+
 while(saida == "nao") {
     var num = prompt("Digite um numero inteiro");
-    var media = somarImpares + somarPares / 2;
 
     if(num%2==0){
         numerosPares = numerosPares + 1;
@@ -103,7 +103,7 @@ while(saida == "nao") {
     }
     saida = prompt( "Deseja sair??!  SIM | NAO " )
 }
-console.log(" A média dos números digitados é: " + media)
+console.log(" A média dos números digitados é: " + (somarImpares + somarPares) / (numerosPares + numerosImpares))
 
 
 
