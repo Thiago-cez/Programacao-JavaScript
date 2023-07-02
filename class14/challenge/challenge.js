@@ -30,6 +30,10 @@ function CalcularCompra() {
   const sizeM_ = document.getElementById("sizeM");
   const sizeG_ = document.getElementById("sizeG");
 
+  let somaP = 0;
+  let somaM = 0;
+  let somaG = 0;
+
   let comprar = "sim";
 
   while(comprar == "sim") {
@@ -53,11 +57,15 @@ function CalcularCompra() {
         }
     }
     else { 
-      console.log("camisas P = "+ sizeP_);
-      console.log("camisas M = "+ sizeM_);
-      console.log("camisa G = "+ sizeG_);
+      somaP = somaP + parseFloat(sizeP_.value);
+      somaM = somaM + parseFloat(sizeM_.value);
+      somaG = somaG + parseFloat(sizeG_.value);
 
-      document.getElementById("saida").innerHTML = `You Bought:${sizeP_} P t-shorts | ${sizeM_} M t-shorts | ${sizeG_} G t-shorts `;
+      console.log("camisas P = "+ somaP);
+      console.log("camisas M = "+ somaM  );
+      console.log("camisa G = "+ somaG);
+
+      //document.getElementById("saida").innerHTML = `You Bought:${sizeP_} P t-shorts | ${sizeM_} M t-shorts | ${sizeG_} G t-shorts `;
     }
     comprar = prompt("Gostaria de Realizar uma nova Compra? sim | nao ");
   }
