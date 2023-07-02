@@ -126,5 +126,15 @@ console.log(" A média dos números digitados é: " + (somarImpares + somarPares
 //deseja sair? nao
 //digite um numero:5 (5x1=5, 5x2=10 ... 5x10=50)
 //deseja sair? sim
+let resposta = "sim";
 
+while( resposta == "sim" ) {
+    let num = prompt("Digite um numero ");
+
+    for(contador=0; contador<11; contador++){
+        console.log(contador+ "x" + num + "=" + contador * num)
+    }
+    resposta = prompt("Gostaria de Digitar um novo Numero? sim | nao")
+}
+console.log("Obrigado Por calcular!!")
 //------------------------------------------------------------  
