@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> T-shorts control </title>
 </head>
-<body>
+<body >
     
     <div> 
         <label for="sizeP">Insert how Much P' T-shorts are: </label>
@@ -18,7 +18,8 @@
         <input type="number" id="sizeG" placeholder=" size G here">
 
     </div>
-    <button onclick="CalcularCompra()">BUY</button>
+    <button onclick="CalcularCompra(); limparValores()"> BUY </button>
+    <button onclick="limparValores()">CLEAR</button>
 
     <div id="saida"> </div>
 

@@ -23,12 +23,33 @@ exemplo de compras
  Qtd M: 8   =  44 euros
  Qtd G: 18  =  108 euros
 Media: 74 euros
-*/;
+*/
+
+
+const precoP = 5;
+const precoM = 5.5;
+const precoG = 6;
+
+
+function limparValores(){
+
+  document.getElementById("sizeP").value = ("");
+  document.getElementById("sizeM").value = ("");
+  document.getElementById("sizeG").value = ("");
+  
+
+}
 
 function CalcularCompra() {
+  
   const sizeP_ = document.getElementById("sizeP");
   const sizeM_ = document.getElementById("sizeM");
   const sizeG_ = document.getElementById("sizeG");
+
+  sizeP_.style.border = "none";
+  sizeM_.style.border = "none";
+  sizeG_.style.border = "none";
+
 
   let somaP = 0;
   let somaM = 0;
@@ -36,7 +57,6 @@ function CalcularCompra() {
 
   let comprar = "sim";
 
-  while(comprar == "sim") {
     if(!sizeP_.value || !sizeM_.value || !sizeG_.value){
         if((!sizeP_.value) && (!sizeM_.value) && (!sizeG_.value)){
           sizeP_.style.border = "2px solid red";
@@ -57,19 +77,27 @@ function CalcularCompra() {
         }
     }
     else { 
+      while(comprar == "sim") {
       somaP = somaP + parseFloat(sizeP_.value);
       somaM = somaM + parseFloat(sizeM_.value);
       somaG = somaG + parseFloat(sizeG_.value);
+      
+      comprar = prompt("Gostaria de Realizar uma nova Compra? sim | nao ");
+    } 
+      const calculoTotalP = somaP * precoP;
+      const calculoTotalM = somaM * precoM;
+      const calculoTotalG = somaG * precoG;
 
-      console.log("camisas P = "+ somaP);
-      console.log("camisas M = "+ somaM  );
-      console.log("camisa G = "+ somaG);
-
-      //document.getElementById("saida").innerHTML = `You Bought:${sizeP_} P t-shorts | ${sizeM_} M t-shorts | ${sizeG_} G t-shorts `;
-    }
-    comprar = prompt("Gostaria de Realizar uma nova Compra? sim | nao ");
+      let mediaValores = (calculoTotalP + calculoTotalM + calculoTotalG) / 3;
+      console.log("camisas P = "+ somaP + " = " + (somaP * precoP) + "Euros" );
+      console.log("camisas M = "+ somaM + " = " + (somaM * precoM) + "Euros" );
+      console.log("camisa G = "+ somaG + " = " + (somaG * precoG) + "Euros");
+      console.log("A Média é :" + mediaValores + " Euros")
+      document.getElementById("saida").innerHTML = `You Bought:${somaP}P t-shorts | ${somaM}M t-shorts | ${somaG}G t-shorts | average: ${mediaValores}€ `;
   }
   ///
-
+  
+    
+    
 
 }
