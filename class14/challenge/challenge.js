@@ -78,9 +78,9 @@ function CalcularCompra() {
     }
     else { 
       while(comprar == "sim") {
-      somaP = somaP + parseFloat(sizeP_.value);
-      somaM = somaM + parseFloat(sizeM_.value);
-      somaG = somaG + parseFloat(sizeG_.value);
+      somaP = somaP + parseInt(sizeP_.value);
+      somaM = somaM + parseInt(sizeM_.value);
+      somaG = somaG + parseInt(sizeG_.value);
       
       comprar = prompt("Gostaria de Realizar uma nova Compra? sim | nao ");
     } 
