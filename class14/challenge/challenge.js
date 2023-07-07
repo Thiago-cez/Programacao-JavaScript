@@ -95,9 +95,6 @@ function CalcularCompra() {
       console.log("A Média é :" + mediaValores + " Euros")
       document.getElementById("saida").innerHTML = `You Bought:${somaP}P t-shorts | ${somaM}M t-shorts | ${somaG}G t-shorts | average: ${mediaValores}€ `;
   }
-  ///
-  
-    
     
 
 }
