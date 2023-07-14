@@ -15,13 +15,20 @@ function cadastroItem() {
 }
 
 function listarItens() {
+
     let resultado = document.getElementById("resultado");
+    
 
     for(let i = 0; i < itensCadastrados.length; i++){
-        resultado.innerHTML += "Nome: " + itensCadastrados[i].nome + "<br>";
+        resultado.innerHTML += itensCadastrados[i].nome + "<br>";
         resultado.innerHTML += "Preço: " + itensCadastrados[i].preco + "<br>";
         resultado.innerHTML += "Imagem: " + itensCadastrados[i].image + "<br>";
         resultado.innerHTML += "<br>";
     }
+    
 }
 
+function limparTela() {
+    let resultado = document.getElementById("resultado");
+    resultado.innerHTML = "";
+}
