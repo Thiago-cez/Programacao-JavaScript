@@ -1,29 +1,27 @@
-let itensCadastrado = [];
+let itensCadastrados = [];
 
 function cadastroItem() {
-
-    nomeItem =   document.getElementById("nome").value;
-    precoItem = document.getElementById("preco").value;
-    imgItem =  document.getElementById("image").value;
+    let nomeItem = document.getElementById("nome").value;
+    let precoItem = document.getElementById("preco").value;
+    let imgItem = document.getElementById("image").value;
 
     let novoItem = { 
         nome: nomeItem,
         preco: precoItem,
         image: imgItem 
-    }
-    itensCadastrado.push(novoItem);
+    };
+
+    itensCadastrados.push(novoItem);
 }
 
 function listarItens() {
+    let resultado = document.getElementById("resultado");
 
-    for(i = 0; i < itensCadastrado.length; i++){
-     document.getElementById("resultado").innerHTML = 
-     `<ul>
-        <li>{arreyItem.nome}</li>
-        <li>{arreyItem.preco}</li>
-        <li>{arreyItem.imgItem}</li>
-     </ul>`
-     }
+    for(let i = 0; i < itensCadastrados.length; i++){
+        resultado.innerHTML += "Nome: " + itensCadastrados[i].nome + "<br>";
+        resultado.innerHTML += "Preço: " + itensCadastrados[i].preco + "<br>";
+        resultado.innerHTML += "Imagem: " + itensCadastrados[i].image + "<br>";
+        resultado.innerHTML += "<br>";
+    }
 }
-
 
